@@ -72,7 +72,6 @@ def can_update_using_update_method
   # Update movie title to "Wat, huh?"
   movie = Movie.create(title: "Wat?")
   movie.update(title: "Wat, huh?")
-  movie.save
 end
 
 def can_update_multiple_items_at_once
@@ -81,7 +80,6 @@ def can_update_multiple_items_at_once
     # binding.pry
     movie = Movie.create(title: "Movie_#{i}", release_date: 2000+i)
     movie.update(title: "A Movie")
-    # movie.save
   end
 end
 
