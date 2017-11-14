@@ -71,7 +71,7 @@ end
 def can_update_using_update_method
   # Update movie title to "Wat, huh?"
   movie = Movie.create(title: "Wat?")
-  binding.pry
+  # binding.pry
   movie.update(title "Wat, huh?")
   movie.save
 end
