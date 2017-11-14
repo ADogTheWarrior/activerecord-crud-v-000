@@ -79,9 +79,10 @@ def can_update_multiple_items_at_once
   # Change title of all movies to "A Movie"
   5.times do |i|
     binding.pry
-    Movie.create(title: "Movie_#{i}", release_date: 2000+i)
+    movie = Movie.create(title: "Movie_#{i}", release_date: 2000+i)
+    movie.update(title: "A Movie")
+    movie.save
   end
-  __
 end
 
 def can_destroy_a_single_item
